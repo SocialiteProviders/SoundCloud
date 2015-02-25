@@ -17,7 +17,9 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase('https://soundcloud.com/connect', $state);
+        return $this->buildAuthUrlFromBase(
+            'https://soundcloud.com/connect', $state
+        );
     }
 
     /**
@@ -33,7 +35,9 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getUserByToken($token)
     {
-        $response = $this->getHttpClient()->get('https://api.soundcloud.com/me.json?oauth_token='.$token);
+        $response = $this->getHttpClient()->get(
+            'https://api.soundcloud.com/me.json?oauth_token='.$token
+        );
 
         return json_decode($response->getBody(), true);
     }
@@ -44,11 +48,8 @@ class Provider extends AbstractProvider implements ProviderInterface
     protected function mapUserToObject(array $user)
     {
         return (new User())->setRaw($user)->map([
-            'id'       => $user['id'],
-            'nickname' => $user['username'],
-            'name'     => null,
-            'email'    => null,
-            'avatar'   => $user['avatar_url'],
+            'id' => $user['id'], 'nickname' => $user['username'],
+            'name' => null, 'email' => null, 'avatar' => $user['avatar_url'],
         ]);
     }
 
@@ -57,6 +58,8 @@ class Provider extends AbstractProvider implements ProviderInterface
      */
     protected function getTokenFields($code)
     {
-        return array_merge(parent::getTokenFields($code), ['grant_type' => 'authorization_code']);
+        return array_merge(parent::getTokenFields($code), [
+            'grant_type' => 'authorization_code',
+        ]);
     }
 }
