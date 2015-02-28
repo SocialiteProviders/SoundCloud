@@ -1,5 +1,11 @@
 # SoundCloud OAuth2 Provider for Laravel Socialite
 
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/SocialiteProviders/SoundCloud.svg?style=flat-square)](https://scrutinizer-ci.com/g/SocialiteProviders/SoundCloud/?branch=master)
+[![Latest Stable Version](https://img.shields.io/packagist/v/socialiteproviders/soundcloud.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/soundcloud)
+[![Total Downloads](https://img.shields.io/packagist/dt/socialiteproviders/soundcloud.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/soundcloud)
+[![Latest Unstable Version](https://img.shields.io/packagist/vpre/socialiteproviders/soundcloud.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/soundcloud)
+[![License](https://img.shields.io/packagist/l/socialiteproviders/soundcloud.svg?style=flat-square)](https://packagist.org/packages/socialiteproviders/soundcloud)
+
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## Contents
