@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialiteProviders\SoundCloud;
 
 use Laravel\Socialite\Two\AbstractProvider;
@@ -39,7 +40,7 @@ class Provider extends AbstractProvider implements ProviderInterface
             'https://api.soundcloud.com/me.json?oauth_token='.$token
         );
 
-        return json_decode($response->getBody(), true);
+        return json_decode($response->getBody()->getContents(), true);
     }
 
     /**

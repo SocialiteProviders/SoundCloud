@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialiteProviders\SoundCloud;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
